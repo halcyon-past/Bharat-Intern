@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://upload.wikimedia.org/wikipedia/en/thumb/d/d5/Thermometer_icon.png/768px-Thermometer_icon.png" />
+    <title>Temperature Converter</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Temperature Converter</h1>
+      <div class="box">
+        <input
+          type="number"
+          id="input"
+          class="input"
+          placeholder="Enter Temperature" />
+        <select name="inpDEG" id="inpDEG" class="select">
+          <option value="1">Celcius</option>
+          <option value="2">Fahrenheit</option>
+          <option value="3">Kelvin</option>
+        </select>
+      </div>
+      <div class="box">
+        <div id="result">Result</div>
+        <select name="outDEG" id="outDEG" class="select">
+            <option value="1">Celcius</option>
+            <option value="2">Fahrenheit</option>
+            <option value="3">Kelvin</option>
+        </select>
+      </div>
+      <button class="btn" onclick="convert()">Convert</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
