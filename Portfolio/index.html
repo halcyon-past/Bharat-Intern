@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <script
+      id="gsap-script"
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script
+      id="scroll-trigger-script"
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <title>Aritro Saha</title>
+  </head>
+  <body>
+    <div id="Home" class="first">
+      <div class="nav">
+        <div class="logo">
+          <img src="assets/Logo.png" alt="logo" />
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#About">About Me</a></li>
+            <li><a href="#MyWork">My Work</a></li>
+            <li><a href="#ContactMe">Contact Me</a></li>
+          </ul>
+          <div class="dark-mode-toggle" onClick="toggleDarkMode()">
+            <svg
+              stroke="currentColor"
+              fill="none"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="desc">
+          Hi i am <span class="grad">Aritro Saha!</span> <br />
+          I am <span id="typer" class="moving"></span>
+        </div>
+        <img class="avatar" src="assets/Avatar.png" alt="avatar" />
+      </div>
+    </div>
+    <div id="About" class="second">
+      <div class="about">
+        <div class="education">
+          <div class="title">
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"></path>
+            </svg>
+            <h1>Education</h1>
+          </div>
+          <div class="content">
+            <div class="item">
+              <div class="year">2021 - 2025</div>
+              <div class="desc">
+                <div class="name">
+                  B.Tech in Electronics and Computer Engineering
+                </div>
+                <div class="college">
+                  Vellore Institute of Technology, Chennai
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="year">2019 - 2021</div>
+              <div class="desc">
+                <div class="name">Higher Secondary</div>
+                <div class="college">Birla Bharati</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="year">2007 - 2019</div>
+              <div class="desc">
+                <div class="name">Secondary</div>
+                <div class="college">Birla Bharati</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="experience">
+          <div class="title">
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 640 512"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M255.03 261.65c6.25 6.25 16.38 6.25 22.63 0l11.31-11.31c6.25-6.25 6.25-16.38 0-22.63L253.25 192l35.71-35.72c6.25-6.25 6.25-16.38 0-22.63l-11.31-11.31c-6.25-6.25-16.38-6.25-22.63 0l-58.34 58.34c-6.25 6.25-6.25 16.38 0 22.63l58.35 58.34zm96.01-11.3l11.31 11.31c6.25 6.25 16.38 6.25 22.63 0l58.34-58.34c6.25-6.25 6.25-16.38 0-22.63l-58.34-58.34c-6.25-6.25-16.38-6.25-22.63 0l-11.31 11.31c-6.25 6.25-6.25 16.38 0 22.63L386.75 192l-35.71 35.72c-6.25 6.25-6.25 16.38 0 22.63zM624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"></path>
+            </svg>
+            <h1>Experience</h1>
+          </div>
+          <div class="content">
+            <div class="item">
+              <div class="year">JUL 23 - AUG 23</div>
+              <div class="desc">
+                <div class="name">Data Science</div>
+                <div class="college">Capabl</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="year">MAY 23 - JUL 23</div>
+              <div class="desc">
+                <div class="name">Web Developer</div>
+                <div class="college">DevTown</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="skills">
+        <h1>
+          <svg
+            stroke="currentColor"
+            fill="currentColor"
+            stroke-width="0"
+            viewBox="0 0 640 512"
+            height="1em"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"></path>
+          </svg>
+          Skills
+        </h1>
+        <div class="badges">
+          <div class="frontend">
+            <h2>Frontend</h2>
+            <div class="items">
+              <img
+                src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"
+                alt="React" />
+              <img
+                src="https://img.shields.io/badge/nextjs-%23000000.svg?style=for-the-badge&logo=next.js&logoColor=white"
+                alt="NextJS" />
+              <img
+                src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"
+                alt="HTML5" />
+              <img
+                src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"
+                alt="CSS3" />
+              <img
+                src="https://img.shields.io/badge/sass-%23CC6699.svg?style=for-the-badge&logo=sass&logoColor=white"
+                alt="SASS" />
+              <img
+                src="https://img.shields.io/badge/styled--components-%23DB7093.svg?style=for-the-badge&logo=styled-components&logoColor=white"
+                alt="Styled Components" />
+              <img
+                src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white"
+                alt="Tailwind CSS" />
+              <img
+                src="https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white"
+                alt="Bootstrap" />
+            </div>
+          </div>
+          <div class="backend">
+            <h2>Backend</h2>
+            <div class="items">
+              <img
+                src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white"
+                alt="React" />
+              <img
+                src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge"
+                alt="ExpressJS" />
+              <img
+                src="https://img.shields.io/badge/Socket.io-black?style=for-the-badge&logo=socket.io&badgeColor=010101"
+                alt="SocketIO" />
+              <img
+                src="https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white"
+                alt="Django" />
+              <img
+                src="https://img.shields.io/badge/Flask-%23000.svg?style=for-the-badge&logo=Flask&logoColor=white"
+                alt="Flask" />
+              <img
+                src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi"
+                alt="FastAPI" />
+              <img
+                src="https://img.shields.io/badge/PostgreSQL-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white"
+                alt="PostgreSQL" />
+              <img
+                src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white"
+                alt="MongoDB" />
+              <img
+                src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white"
+                alt="MySQL" />
+            </div>
+          </div>
+          <div class="services">
+            <h2>Services</h2>
+            <div class="items">
+              <img
+                src="https://img.shields.io/badge/Amazon_AWS-%23232F3E.svg?style=for-the-badge&logo=amazon-aws&logoColor=white"
+                alt="AWS" />
+              <img
+                src="https://img.shields.io/badge/Heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white"
+                alt="Heroku" />
+              <img
+                src="https://img.shields.io/badge/Netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=white"
+                alt="Netlify" />
+              <img
+                src="https://img.shields.io/badge/Vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white"
+                alt="Vercel" />
+              <img
+                src="https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white"
+                alt="NPM" />
+              <img
+                src="https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white"
+                alt="Vite" />
+            </div>
+          </div>
+          <div class="languages">
+            <h2>Programming Languages</h2>
+            <div class="items">
+              <img
+                src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"
+                alt="Python" />
+              <img
+                src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white"
+                alt="TypeScript" />
+              <img
+                src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"
+                alt="JavaScript" />
+              <img
+                src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white"
+                alt="C" />
+              <img
+                src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white"
+                alt="C++" />
+              <img
+                src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white"
+                alt="Java" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="MyWork" class="third">
+      <h1>Projects</h1>
+      <div class="cards">
+        <div class="card">
+          <img src="assets/Netflix.png" alt="Netflix Clone" />
+          <div class="info">
+            <h2>Netflix Clone</h2>
+            <a
+              href="https://github.com/halcyon-past/Bharat-Intern/tree/main/Netflix%20Clone"
+              target="_blank">
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 1024 1024"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets/MotionDetection.png" alt="Motion Detection" />
+          <div class="info">
+            <h2>Motion Detection<br />and<br />Tracking System</h2>
+            <a
+              href="https://github.com/halcyon-past/Motion-Detection"
+              target="_blank">
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 1024 1024"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets/DiscordBot.png" alt="Discord Bot" />
+          <div class="info">
+            <h2>Harem No Jutsu</h2>
+            <a
+              href="https://github.com/halcyon-past/Harem-No-Jutsu"
+              target="_blank">
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 1024 1024"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets/InstaClone.png" alt="Instagram CLone" />
+          <div class="info">
+            <h2>Instagram Clone</h2>
+            <a
+              href="https://github.com/halcyon-past/Instagram-UI-Clone-HTML_CSS"
+              target="_blank">
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 1024 1024"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="ContactMe" class="fourth">
+      <div class="contents">
+        <h1>Get In Touch!!</h1>
+        <form
+          action="https://formsubmit.co/aritrosahaofficial@gmail.com"
+          method="POST">
+          <input type="hidden" name="_captcha" value="false" />
+          <input
+            class="text"
+            type="text"
+            name="name"
+            placeholder="Enter Your Name"
+            required />
+          <input
+            class="email"
+            type="email"
+            name="email"
+            placeholder="Enter Your Email"
+            required />
+          <textarea
+            class="message"
+            name="message"
+            placeholder="Enter Your Message"
+            required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+      <div class="footer">
+        <div class="logo">
+          <img src="assets/logo.png" alt="Logo" />
+        </div>
+        <div class="socials">
+          <a href="https://github.com/halcyon-past" target="_blank"><svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 1024 1024"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z"></path></svg></a>
+          <a href="https://www.instagram.com/halcyon_past" target="_blank"><svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 1024 1024"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M512 306.9c-113.5 0-205.1 91.6-205.1 205.1S398.5 717.1 512 717.1 717.1 625.5 717.1 512 625.5 306.9 512 306.9zm0 338.4c-73.4 0-133.3-59.9-133.3-133.3S438.6 378.7 512 378.7 645.3 438.6 645.3 512 585.4 645.3 512 645.3zm213.5-394.6c-26.5 0-47.9 21.4-47.9 47.9s21.4 47.9 47.9 47.9 47.9-21.3 47.9-47.9a47.84 47.84 0 0 0-47.9-47.9zM911.8 512c0-55.2.5-109.9-2.6-165-3.1-64-17.7-120.8-64.5-167.6-46.9-46.9-103.6-61.4-167.6-64.5-55.2-3.1-109.9-2.6-165-2.6-55.2 0-109.9-.5-165 2.6-64 3.1-120.8 17.7-167.6 64.5C132.6 226.3 118.1 283 115 347c-3.1 55.2-2.6 109.9-2.6 165s-.5 109.9 2.6 165c3.1 64 17.7 120.8 64.5 167.6 46.9 46.9 103.6 61.4 167.6 64.5 55.2 3.1 109.9 2.6 165 2.6 55.2 0 109.9.5 165-2.6 64-3.1 120.8-17.7 167.6-64.5 46.9-46.9 61.4-103.6 64.5-167.6 3.2-55.1 2.6-109.8 2.6-165zm-88 235.8c-7.3 18.2-16.1 31.8-30.2 45.8-14.1 14.1-27.6 22.9-45.8 30.2C695.2 844.7 570.3 840 512 840c-58.3 0-183.3 4.7-235.9-16.1-18.2-7.3-31.8-16.1-45.8-30.2-14.1-14.1-22.9-27.6-30.2-45.8C179.3 695.2 184 570.3 184 512c0-58.3-4.7-183.3 16.1-235.9 7.3-18.2 16.1-31.8 30.2-45.8s27.6-22.9 45.8-30.2C328.7 179.3 453.7 184 512 184s183.3-4.7 235.9 16.1c18.2 7.3 31.8 16.1 45.8 30.2 14.1 14.1 22.9 27.6 30.2 45.8C844.7 328.7 840 453.7 840 512c0 58.3 4.7 183.2-16.2 235.8z"></path></svg></a>
+          <a href="https://www.linkedin.com/in/aritro-saha-77562a222/" target="_blank"><svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 1024 1024"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M847.7 112H176.3c-35.5 0-64.3 28.8-64.3 64.3v671.4c0 35.5 28.8 64.3 64.3 64.3h671.4c35.5 0 64.3-28.8 64.3-64.3V176.3c0-35.5-28.8-64.3-64.3-64.3zm0 736c-447.8-.1-671.7-.2-671.7-.3.1-447.8.2-671.7.3-671.7 447.8.1 671.7.2 671.7.3-.1 447.8-.2 671.7-.3 671.7zM230.6 411.9h118.7v381.8H230.6zm59.4-52.2c37.9 0 68.8-30.8 68.8-68.8a68.8 68.8 0 1 0-137.6 0c-.1 38 30.7 68.8 68.8 68.8zm252.3 245.1c0-49.8 9.5-98 71.2-98 60.8 0 61.7 56.9 61.7 101.2v185.7h118.6V584.3c0-102.8-22.2-181.9-142.3-181.9-57.7 0-96.4 31.7-112.3 61.7h-1.6v-52.2H423.7v381.8h118.6V604.8z"></path></svg></a>
+          <a href="https://codepen.io/halcyon_past" target="_blank"><svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                fill-rule="evenodd"
+                d="M12.0001023,22.0293246 C6.46990155,22.0293246 1.97088004,17.5301496 1.97088004,12.0001023 C1.97088004,6.4701062 6.46990155,1.97088004 12.0001023,1.97088004 C17.5300984,1.97088004 22.02912,6.4701062 22.02912,12.0001023 C22.02912,17.5301496 17.5300984,22.0293246 12.0001023,22.0293246 M12.0001023,0 C5.37246693,0 0,5.37251809 0,12.0001023 C0,18.6277377 5.37246693,24.0000512 12.0001023,24.0000512 C18.6275331,24.0000512 24,18.6277377 24,12.0001023 C24,5.37251809 18.6275331,0 12.0001023,0 M18.1444674,13.0672488 L16.5492221,12.0001023 L18.1444674,10.933007 L18.1444674,13.0672488 Z M12.6376991,17.5906236 L12.6376991,14.6163967 L15.4022622,12.767488 L17.6339173,14.2599991 L12.6376991,17.5906236 Z M12.0001126,13.5086784 L9.74466695,12.0001023 L12.0001126,10.4915262 L14.2553535,12.0001023 L12.0001126,13.5086784 Z M11.3623214,17.5906236 L6.36605201,14.2599991 L8.59791172,12.767488 L11.3623214,14.6163967 L11.3623214,17.5906236 Z M5.85555304,10.933007 L7.45095183,12.0001023 L5.85555304,13.0672488 L5.85555304,10.933007 Z M11.3623214,6.40958102 L11.3623214,9.38380794 L8.59791172,11.233126 L6.36605201,9.74015443 L11.3623214,6.40958102 Z M12.6376991,6.40958102 L17.6339173,9.74015443 L15.4022622,11.233126 L12.6376991,9.38380794 L12.6376991,6.40958102 Z M19.414166,9.656248 C19.4128358,9.64688527 19.4104823,9.63793184 19.4089475,9.62856911 C19.4057754,9.61055993 19.402501,9.59260191 19.397794,9.57505319 C19.3950313,9.56451372 19.3911429,9.55438356 19.3878685,9.54425339 C19.3827523,9.52859768 19.3776872,9.51299313 19.3714454,9.49779788 C19.3670966,9.48725842 19.3620827,9.47671895 19.3572222,9.46658879 C19.3505199,9.45210981 19.3435618,9.43804014 19.3355293,9.42443092 C19.3296968,9.4142496 19.323455,9.40447757 19.3174178,9.3947567 C19.3088225,9.38145446 19.3000226,9.36856152 19.2904041,9.35607789 C19.283446,9.34671516 19.2760274,9.33735243 19.2686089,9.32834784 C19.2584275,9.3166828 19.2478881,9.3049666 19.2367858,9.29401783 C19.2284463,9.2854737 19.220158,9.27687841 19.2114092,9.26905055 C19.199693,9.25851109 19.1876187,9.24832976 19.1752885,9.23860889 C19.1657723,9.23119034 19.1563584,9.22377178 19.1464329,9.21676253 C19.1426981,9.21440905 19.1394237,9.21128814 19.1358934,9.20893467 L12.3536963,4.687504 C12.1394791,4.54465843 11.8605414,4.54465843 11.646273,4.687504 L4.86412702,9.20893467 C4.86059681,9.21128814 4.85727125,9.21440905 4.85358755,9.21676253 C4.84361088,9.22377178 4.83424815,9.23119034 4.82488542,9.23860889 C4.81240178,9.24832976 4.80027628,9.25851109 4.78881589,9.26905055 C4.7798113,9.27687841 4.7716253,9.2854737 4.76323466,9.29401783 C4.75213241,9.3049666 4.74159294,9.3166828 4.73161626,9.32834784 C4.72399306,9.33735243 4.7165745,9.34671516 4.70956525,9.35607789 C4.70020252,9.36856152 4.69119793,9.38145446 4.68280728,9.3947567 C4.67636081,9.40447757 4.67032365,9.4142496 4.66449113,9.42443092 C4.65666327,9.43804014 4.64965401,9.45210981 4.64279825,9.46658879 C4.63793781,9.47671895 4.63287273,9.48725842 4.62857508,9.49779788 C4.62233326,9.51299313 4.61726818,9.52859768 4.61215194,9.54425339 C4.60882638,9.55438356 4.60514268,9.56451372 4.60222642,9.57505319 C4.59751947,9.59260191 4.59439856,9.61055993 4.591073,9.62856911 C4.58953813,9.63793184 4.58718466,9.64688527 4.58600792,9.656248 C4.58227306,9.68356875 4.5801754,9.7112988 4.5801754,9.73938699 L4.5801754,14.2608177 C4.5801754,14.2889058 4.58227306,14.3166359 4.58600792,14.3443659 C4.58718466,14.3533705 4.58953813,14.3626821 4.591073,14.3716355 C4.59439856,14.3896447 4.59751947,14.4075516 4.60222642,14.4251515 C4.60514268,14.4356909 4.60882638,14.4458211 4.61215194,14.4560024 C4.61726818,14.4715558 4.62233326,14.4872115 4.62857508,14.5028161 C4.63287273,14.5134067 4.63793781,14.5235369 4.64279825,14.533667 C4.64965401,14.5480437 4.65666327,14.5621134 4.66449113,14.576183 C4.67032365,14.5860062 4.67636081,14.5956759 4.68280728,14.6054479 C4.69119793,14.6187502 4.70020252,14.6316431 4.70956525,14.6441268 C4.7165745,14.6538988 4.72399306,14.6628522 4.73161626,14.6718057 C4.74159294,14.6835219 4.75213241,14.6952381 4.76323466,14.7061868 C4.7716253,14.7147309 4.7798113,14.7233262 4.78881589,14.7311029 C4.80027628,14.7417447 4.81240178,14.7518749 4.82488542,14.7615958 C4.83424815,14.7690655 4.84361088,14.7764329 4.85358755,14.7834421 C4.85727125,14.7857956 4.86059681,14.7889165 4.86412702,14.7912188 L11.646273,19.3127007 C11.7534072,19.3841234 11.8767599,19.4200395 12.0001126,19.4200395 C12.1232606,19.4200395 12.2465621,19.3841234 12.3536963,19.3127007 L19.1358934,14.7912188 C19.1394237,14.7889165 19.1426981,14.7857956 19.1464329,14.7834421 C19.1563584,14.7764329 19.1657723,14.7690655 19.1752885,14.7615958 C19.1876187,14.7518749 19.199693,14.7417447 19.2114092,14.7311029 C19.220158,14.7233262 19.2284463,14.7147309 19.2367858,14.7061868 C19.2478881,14.6952381 19.2584275,14.6835219 19.2686089,14.6718057 C19.2760274,14.6628522 19.283446,14.6538988 19.2904041,14.6441268 C19.3000226,14.6316431 19.3088225,14.6187502 19.3174178,14.6054479 C19.323455,14.5956759 19.3296968,14.5860062 19.3355293,14.576183 C19.3435618,14.5621134 19.3505199,14.5480437 19.3572222,14.533667 C19.3620827,14.5235369 19.3670966,14.5134067 19.3714454,14.5028161 C19.3776872,14.4872115 19.3827523,14.4715558 19.3878685,14.4560024 C19.3911429,14.4458211 19.3950313,14.4356909 19.397794,14.4251515 C19.402501,14.4075516 19.4057754,14.3896447 19.4089475,14.3716355 C19.4104823,14.3626821 19.4128358,14.3533705 19.414166,14.3443659 C19.4176962,14.3166359 19.4198962,14.2889058 19.4198962,14.2608177 L19.4198962,9.73938699 C19.4198962,9.7112988 19.4176962,9.68356875 19.414166,9.656248 L19.414166,9.656248 Z"></path></svg></a>
+          <a href="https://wa.me/8777585695" target="_blank"><svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              version="1.1"
+              viewBox="0 0 16 16"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M13.641 2.325c-1.497-1.5-3.488-2.325-5.609-2.325-4.369 0-7.925 3.556-7.925 7.928 0 1.397 0.366 2.763 1.059 3.963l-1.125 4.109 4.203-1.103c1.159 0.631 2.463 0.966 3.787 0.966h0.003c0 0 0 0 0 0 4.369 0 7.928-3.556 7.928-7.928 0-2.119-0.825-4.109-2.322-5.609zM8.034 14.525v0c-1.184 0-2.344-0.319-3.356-0.919l-0.241-0.144-2.494 0.653 0.666-2.431-0.156-0.25c-0.663-1.047-1.009-2.259-1.009-3.506 0-3.634 2.956-6.591 6.594-6.591 1.759 0 3.416 0.688 4.659 1.931 1.244 1.247 1.928 2.9 1.928 4.662-0.003 3.637-2.959 6.594-6.591 6.594zM11.647 9.588c-0.197-0.1-1.172-0.578-1.353-0.644s-0.313-0.1-0.447 0.1c-0.131 0.197-0.512 0.644-0.628 0.778-0.116 0.131-0.231 0.15-0.428 0.050s-0.838-0.309-1.594-0.984c-0.588-0.525-0.987-1.175-1.103-1.372s-0.013-0.306 0.088-0.403c0.091-0.088 0.197-0.231 0.297-0.347s0.131-0.197 0.197-0.331c0.066-0.131 0.034-0.247-0.016-0.347s-0.447-1.075-0.609-1.472c-0.159-0.388-0.325-0.334-0.447-0.341-0.116-0.006-0.247-0.006-0.378-0.006s-0.347 0.050-0.528 0.247c-0.181 0.197-0.694 0.678-0.694 1.653s0.709 1.916 0.809 2.050c0.1 0.131 1.397 2.134 3.384 2.991 0.472 0.203 0.841 0.325 1.128 0.419 0.475 0.15 0.906 0.128 1.247 0.078 0.381-0.056 1.172-0.478 1.338-0.941s0.166-0.859 0.116-0.941c-0.047-0.088-0.178-0.137-0.378-0.238z"></path></svg></a>
+          <a href="https://twitter.com/halcyon_past" target="_blank"><svg
+              stroke="currentColor"
+              fill="none"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
